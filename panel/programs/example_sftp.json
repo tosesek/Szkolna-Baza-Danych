@@ -1,0 +1,10 @@
+{
+  "name": "Szkolna Baza Danych",
+  "host": "sbd.zst.pila.pl",
+  "protocol": "ftp",
+  "port": 203,
+  "username": "Tutaj twój login",
+  "password": "Tutaj twoje hasło",
+  "remotePath": "/var/www/html/nazwa_użytkownika_!małe_litery",
+  "uploadOnSave": true
+}

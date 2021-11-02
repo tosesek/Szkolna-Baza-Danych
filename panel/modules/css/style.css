@@ -1,0 +1,252 @@
+body {margin: 0; user-select: none; background: linear-gradient(45deg, #011, #023);}
+* {outline: none}
+a {text-decoration: none;}
+a:focus {outline: 1px solid #0af;}
+[nomargin] {margin: 0 !important}
+[align-right] {text-align: right;}
+[align-center] {text-align: center;}
+[selectable] {user-select: text !important;}
+[onclick] {cursor: pointer !important}
+
+/* Animacja 0.15s */
+input, 
+button, 
+td, 
+.admin-tools-list > .item 
+{transition: 0.15s}
+
+input:not([type=checkbox]), button, textarea {background: none; border: 0px; background: #ffffff10; padding: 0px 10px; height: 40px; font: 17px YouTube; color: #fff; cursor: pointer; border-radius: 2px; box-shadow: 0px 1px 3px #000000a0;}
+input:not([type=checkbox]):-webkit-autofill {-webkit-text-fill-color: #fff; -webkit-box-shadow: 0 0 0px 1000px #035 inset; transition: background-color 5000s ease-in-out 0s; box-shadow: 0px 1px 3px #000000a0; font: 17px YouTube}
+input:not([type=checkbox]), textarea {cursor: text !important;}
+
+button:not([disabled]) {margin-left: 5px; padding: 8px 15px; background: #ffffff10; border-radius: 3px;}
+button:not([disabled]):hover {box-shadow: 0px 1px 3px #000000; background: #ffffff20}
+button:not([disabled]):active {box-shadow: 0px 1px 3px #000000;}
+button:not([disabled]):focus {box-shadow: inset 0px 0px 0px 2px #0af;}
+
+button:not([disabled])[primary] {background: #08c !important}
+button:not([disabled])[primary]:hover {background: #06a !important}
+button:not([disabled])[primary]:active {background: #049 !important}
+button:not([disabled])[critical] {background: #da0 !important; color: #000}
+button:not([disabled])[critical]:hover {background: #b90 !important}
+button:not([disabled])[critical]:active {background: #960 !important; color: #fff}
+
+button[disabled] {margin-left: 5px; padding: 8px 15px; opacity: 0.5; cursor: not-allowed !important}
+input[disabled] {opacity: 0.5; cursor: not-allowed !important}
+input[disabled]:active {background: #ffffff10}
+
+textarea {padding: 15px; height: auto; display: block; resize: vertical; width: 100%; min-height: 70px}
+
+input:active {background: #055;}
+
+[status=error] {color: #f00 !important; box-shadow: 0px 0px 0px 2px #ff0000 !important;}
+[status=ok] {color: #0f0 !important; box-shadow: 0px 0px 0px 2px #00aa00 !important;}
+
+pre[act] {position: relative; user-select: text; display: inline-block; font: 15px Consolas !important; padding: 7px 12px; margin: 5 !important; background: #ffffff0a; border-bottom: 1px solid #0af; border-radius: 3px; box-shadow: 0px 1px 3px #000000;}
+
+button[dialog-button] {height: 35px !important; padding: 0px 15px;}
+
+.global_dialogs_holder > .dialog > .container {background: #033}
+.global_dialogs_holder > .dialog > .container::after {background: linear-gradient(to right, #08c, #0af);}
+
+.nice-select {position: relative; display: block; background: #ffffff10; box-shadow: 0px 1px 3px #00000060; border-radius: 3px; height: 40px}
+.nice-select .current {font: 17px/40px YouTube; color: #fff}
+.nice-select .list {background: #022; font: 16px/40px YouTube Light; color: #ccc}
+.nice-select .option:not(.disabled):hover {background: #ffffff10; color: #fff}
+.nice-select .option.disabled {color: #666; font-family: YouTube}
+
+.global_header {position: fixed; top: 0px; left: 0px; right: 0px; height: 70px; background: linear-gradient(45deg, #035, #068); box-shadow: 0px 0px 0px 3px #0af, 0px 0px 25px #000000f0; z-index: 999; overflow: hidden;}
+.global_header .header_content {position: relative; display: flex; flex-direction: row; margin: auto; padding: 0px 50px; max-width: 1200px; height: 100%; align-items: center;}
+.global_header .header_content .logo {position: relative; display: inline-block}
+.global_header .header_content .logo img {position: relative; display: block; left: -70px; height: 270px; transform: rotate(-15deg); opacity: 0.15; filter: contrast(2) grayscale(1)}
+.global_header .header_content label {position: absolute; left: 50px; top: 50%; transform: translateY(-53%); text-shadow: 1px 1px 3px #000; font: 40px/40px YouTube; color: #fff; z-index: 99;}
+.global_header .header_content .links {position: relative; display: inline-block; font: 18px YouTube; text-shadow: 1px 1px 3px #000; color: #fff; margin-left: -160px;}
+.global_header .header_content .links a {text-decoration: none; color: #ccc; margin-right: 15px; text-transform: uppercase;}
+.global_header .header_content .links [important] {color: #ff0; font-family: YouTube Bold;}
+.global_header .header_content .links [dev] {color: #f0f; font-family: YouTube Bold;}
+.global_header .account_panel {position: absolute; right: 50px; text-align: right; outline: none;}
+.global_header .account_panel .fullname {position: relative; display: block; font: 20px/20px YouTube; color: #fff; text-shadow: 1px 1px 3px #000}
+.global_header .account_panel .username {position: relative; display: block; font: 16px/18px YouTube; color: #aaa; text-shadow: 1px 1px 3px #000}
+
+.account_panel_container {position: fixed; top: 70px; left: 0px; right: 0px; z-index: 1000;}
+.account_panel_container .content {position: relative; display: block; flex-direction: row; margin: auto; padding: 0px 50px; max-width: 1200px; height: 100%; align-items: center; text-align: left;}
+.account_panel_container .content .container {position: absolute; opacity: 0; display: none; right: 40px; width: 300px; border-radius: 5px; background: #023; box-shadow: 0px 0px 0px 1.5px #0af, 0px 0px 30px #000000}
+.account_panel_container .content .container .details {position: relative; display: block; padding: 15px 20px 15px 20px;}
+.account_panel_container .content .container hr {position: relative; display: block; margin: 0px 15px; border: 0; height: 1px; background: #08c;}
+.account_panel_container .content .container .details .fullname {position: relative; display: block; font: 23px YouTube; color: #fff}
+.account_panel_container .content .container .details .username {position: relative; display: block; font: 17px YouTube Light; color: #aaa}
+.account_panel_container .content .container .actions {position: relative; display: grid; grid-template-columns: 1fr; grid-gap: 0px; padding: 15px}
+.account_panel_container .content .container .actions .item {position: relative; padding: 5px; display: grid; grid-template-columns: auto 1fr; grid-gap: 10px; align-items: center;}
+.account_panel_container .content .container .actions .item .icon {position: relative; display: block}
+.account_panel_container .content .container .actions .item .icon svg {height: 24px}
+.account_panel_container .content .container .actions .item .icon svg path {fill: #ccc}
+.account_panel_container .content .container .actions .item .label {position: relative; display: block; padding-bottom: 1.5px; font: 17px YouTube Light; color: #ccc}
+.account_panel_container .content .container .actions .item:hover {background: #ffffff10;}
+.account_panel_container .content .container .actions .item:hover .label {color: #fff}
+.account_panel_container .content .container .actions .item:hover svg path {fill: #fff}
+.account_panel_container .content .container .actions hr {position: relative; display: block; margin: 5px 0px; border: 0; height: 1px; background: #ffffff10;}
+
+.cookiesinfo_container {position: fixed; left: 0px; bottom: 0px; right: 0px; padding: 40px 0px; background: linear-gradient(45deg, #035, #068); box-shadow: 0px 0px 150px #000000a0; z-index: 999;}
+.cookiesinfo_container .content {position: relative; display: grid; grid-template-columns: 1fr auto; grid-gap: 50px; margin: auto; padding: 0px 50px; max-width: 1400px; height: 100%; align-items: center;}
+.cookiesinfo_container .content .title {position: relative; display: block; font: 30px YouTube Bold; color: #fff; text-transform: uppercase; letter-spacing: 2px;}
+.cookiesinfo_container .content .desc {position: relative; display: block; font: 15px YouTube Light; color: #aaa}
+.cookiesinfo_container .content .desc b {font-family: YouTube; color: #ccc; font-weight: normal;}
+
+.page_generic {position: relative; display: block; margin-top: 120px;}
+.page_generic > .content {position: relative; display: block; margin: auto; padding: 0px 50px 50px 50px; max-width: 1200px; font: 17px YouTube Light; color: #ccc;}
+.page_generic > .content hr {margin: 10px 0px; padding: 0; height: 1px; background: #ffffff40; border: 0}
+.page_generic > .content p {margin: 0; padding: 0;}
+.page_generic > .content a {color: #0cf; font-family: YouTube;}
+.page_generic > .content b {color: #fff; font-family: YouTube; font-weight: normal;}
+.page_generic > .content h1 {margin: 0; padding: 0; font: 40px YouTube Bold, sans-serif; color: #fff; text-transform: uppercase; letter-spacing: 2px;}
+.page_generic > .content h2 {margin: 0; padding: 0; font: 35px YouTube Bold; color: #fff; text-transform: uppercase; letter-spacing: 2px;}
+.page_generic > .content h3 {margin: 0; padding: 0; font: 30px YouTube Bold; color: #fff; text-transform: uppercase; letter-spacing: 2px;}
+.page_generic > .content h4 {margin: 0; padding: 0; font: 25px YouTube; color: #fff; text-transform: uppercase; letter-spacing: 2px;}
+.page_generic > .content h5 {margin: 0; padding: 0; font: 20px YouTube; color: #fff; letter-spacing: 1.5px;}
+.page_generic > .content h6 {margin: 0; padding: 0; font: 15px YouTube; color: #fff; letter-spacing: 1.5px;}
+.page_generic > .content input {margin-top: 10px; width: 50%;}
+.page_generic > .content pre {font: 17px YouTube Light; letter-spacing: 1px; white-space: pre-wrap;}
+.page_generic > .content > ul {position: relative; display: block; text-align: left; margin: 0; padding: 10px 0px 10px 20px}
+
+.page_generic > .content table {width: 100%; overflow: hidden; border-radius: 3px; border: 0; box-shadow: 0px 2px 5px #00000030; background: #002a3a; box-shadow: 0px 2px 5px #00000030}
+.page_generic > .content table thead tr td {padding: 12px 15px; font: 20px YouTube; text-transform: uppercase; background: #003a4a; color: #fff}
+.page_generic > .content table tbody tr td {padding: 3px 15px; font: 16px YouTube Light; color: #ccc}
+.page_generic > .content table tbody tr:hover td {background: #ffffff0a;}
+.page_generic > .content table tbody tr:first-of-type td {padding-top: 10px;}
+.page_generic > .content table tbody tr:last-of-type td {padding-bottom: 10px;}
+.page_generic > .content table tbody tr[highlight] td {color: #0f0}
+.page_generic > .content table tbody tr[blocked] td {color: #f00}
+.page_generic > .content table tbody tr td button {background: #045;}
+.page_generic > .content table tbody tr td button:hover {background: #056;}
+
+.login_container {position: relative; display: block; margin: auto; max-width: 750px; margin-top: 150px; background: #00303a; border-radius: 5px; box-shadow: 0px 5px 20px #00000060;}
+.login_container .info_container {position: relative; display: block; padding: 25px}
+.login_container .info_container .title {position: relative; display: block; text-align: left; font: 30px YouTube; color: #fff}
+.login_container .info_container .desc {position: relative; display: block; text-align: left; font: 20px YouTube Light; color: #ccc}
+.login_container ul {position: relative; display: block; text-align: left; margin: 0; padding: 10px 0px 10px 20px}
+.login_container .login_details {position: relative; display: block; padding: 0px 20px 10px 20px}
+.login_container .login_details > input {position: relative; display: block; width: 100%; margin-bottom: 10px;} 
+.login_container .login_buttons {position: relative; display: block; text-align: right; padding: 0px 20px 20px 20px}
+
+.app_authors {position: fixed; bottom: 25px; right: 25px; text-align: right; z-index: 9999}
+.app_authors .item {position: relative; margin-top: 20px; display: block; height: 50px; width: 50px; border-radius: 25px; background: #0088cca0; box-shadow: 0px 5px 10px #00000070; transition: 0.15s;}
+.app_authors .item:hover {background: #00aaffa0; box-shadow: 0px 2px 10px #000000ff;}
+.app_authors .item:active {background: #00ffffa0; box-shadow: 0px 1px 5px #000000ff;}
+.app_authors .item:active svg path {fill: #000}
+.app_authors .item svg {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); height: 60%}
+.app_authors .item svg path {fill: #fff; transition: 0.15s;}
+
+.admin-user-selection {position: relative; display: grid; grid-template-columns: 0.7fr 0.3fr 1fr auto; grid-gap: 15px}
+.admin-user-selection input {width: 100% !important}
+
+.admin-messages-users-list {position: relative; display: grid; grid-template-columns: 1fr 1fr; margin-top: 20px; grid-gap: 10px}
+.admin-messages-users-list > .item {position: relative; display: block; background: #ffffff10; padding: 10px 15px; border-radius: 5px; box-shadow: 0px 2px 5px #00000060; cursor: pointer;}
+.admin-messages-users-list > .item .fullname {position: relative; display: block; font: 20px YouTube Bold; color: #fff}
+.admin-messages-users-list > .item .details {position: relative; display: block; font: 16px YouTube Light; color: #ccc}
+.admin-messages-users-list > .item .buttons {position: absolute; right: 15px; top: 50%; transform: translateY(-50%)}
+
+.admin-users-list {position: relative; display: grid; grid-template-columns: 1fr; margin-top: 20px; grid-gap: 10px}
+.admin-users-list > .item {position: relative; display: block; background: #ffffff10; padding: 10px 12px; border-radius: 5px; box-shadow: 0px 2px 5px #00000060; cursor: default;}
+.admin-users-list > .item .fullname {position: relative; display: block; font: 18px YouTube Bold; color: #fff}
+.admin-users-list > .item .details {position: relative; display: block; font: 14px YouTube Light; color: #ccc}
+.admin-users-list > .item .buttons {position: absolute; right: 12px; top: 50%; transform: translateY(-50%)}
+
+.admin-tools-list {position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 15px; margin-top: 30px}
+.admin-tools-list > .item {position: relative; display: block; background: #ffffff0a; padding: 25px 50px 25px 25px; border-radius: 5px; box-shadow: 0px 5px 10px #00000030, inset 0px 0px 0px 0px #fff; overflow: hidden;}
+.admin-tools-list > .item:hover {background: #ffffff10; box-shadow: 0px 1px 3px #00000060, inset 0px 0px 0px 3px #fff}
+.admin-tools-list > .item:active {background: #ffffff20; box-shadow: 0px 1px 3px #00000060, inset 0px 0px 0px 3px #fff;}
+.admin-tools-list > .item .name {position: relative; display: flex; align-items: center; margin-bottom: 10px}
+.admin-tools-list > .item .name .label {position: relative; display: inline-block; font: 20px YouTube Bold; color: #fff}
+.admin-tools-list > .item .name svg {position: relative; display: inline-block; left: 0px; height: 22px; width: 22px; padding-right: 10px;}
+.admin-tools-list > .item .name svg path {fill: #fff}
+.admin-tools-list > .item .description {position: relative; display: block; font: 16px YouTube Light; color: #aaa}
+.admin-tools-list > .item .buttons {position: absolute; bottom: 25px; display: block; right: 25px; text-align: right; margin-top: 10px}
+.admin-tools-list > .item[beta]::after {position: absolute; transform: rotate(45deg); right: -30px; top: 20px; width: 120px; height: 25px; box-shadow: 0px 0px 5px 1px #000; background: #fa0; content: "BETA"; text-align: center; letter-spacing: 3px; font: 17px/25px YouTube Bold; color: #000}
+.admin-tools-list > .item[alpha]::after {position: absolute; transform: rotate(45deg); right: -30px; top: 20px; width: 120px; height: 25px; box-shadow: 0px 0px 5px 1px #000; background: #fff; content: "ALPHA"; text-align: center; letter-spacing: 3px; font: 17px/25px YouTube Bold; color: #000}
+.admin-tools-list > .item[new]::after {position: absolute; transform: rotate(45deg); right: -30px; top: 20px; width: 120px; height: 25px; box-shadow: 0px 0px 5px 1px #000; background: #0cf; content: "NOWE"; text-align: center; letter-spacing: 3px; font: 17px/25px YouTube Bold; color: #000}
+.admin-tools-list > .item[updated]::after {position: absolute; transform: rotate(45deg); right: -30px; top: 20px; width: 120px; height: 25px; box-shadow: 0px 0px 5px 1px #000; background: #0a0; content: "ZMIENIONE"; text-align: center; font: 15px/25px YouTube Bold; color: #000}
+.admin-tools-list > .item[warning]::after {position: absolute; transform: rotate(45deg); right: -30px; top: 20px; width: 120px; height: 25px; box-shadow: 0px 0px 5px 1px #000; background: #ff0; content: "WAŻNE"; text-align: center; letter-spacing: 3px; font: 15px/25px YouTube Bold; color: #000}
+.admin-tools-list > .item[warning] .label {color: #ff0}
+.admin-tools-list > .item[warning] .description {color: #ff0}
+.admin-tools-list > .item[warning] path {fill: #ff0 !important}
+
+.admin-tools-stats {position: relative; margin-top: 50px; display: block; overflow: hidden; border-radius: 5px; box-shadow: 0px 2px 5px #000000a0;}
+.admin-tools-stats .title {position: relative; display: block; text-transform: uppercase; font: 30px YouTube Bold; color: #fff; background: #ffffff20; padding: 15px 25px; box-shadow: 0px 0px 10px #000000a0;}
+.admin-tools-stats .content {position: relative; display: block; background: #ffffff0a; padding: 35px}
+
+.admin-tool-dialog-files-list {position: relative; display: block;}
+.admin-tool-dialog-files-list .admin-tool-dialog-file-item {position: relative; cursor: pointer; margin-bottom: 5px; display: grid; grid-template-columns: 1fr auto; padding: 5px 10px; background: #ffffff10; border-radius: 3px;}
+.admin-tool-dialog-files-list .admin-tool-dialog-file-item .name {font: 16px YouTube; color: #ccc}
+.admin-tool-dialog-files-list .admin-tool-dialog-file-item[directory] .name {color: rgb(165, 255, 91)}
+.admin-tool-dialog-files-list .admin-tool-dialog-file-item .bytes {font: 14px YouTube; color: #aaa}
+
+.admin-tools-logs-list {position: relative; display: grid; grid-template-columns: 1fr; grid-gap: 7px;}
+.admin-tools-logs-list > .admin-tools-logs-list-item {position: relative; display: block; padding: 8px 10px; background: #ffffff0a; border-radius: 3px; box-shadow: 0px 1px 3px #000000a0;}
+.admin-tools-logs-list > .admin-tools-logs-list-item:hover {background: #ffffff10;}
+.admin-tools-logs-list > .admin-tools-logs-list-item .firstline {position: relative; display: grid; grid-template-columns: auto 300px 1fr; align-items: flex-start}
+.admin-tools-logs-list > .admin-tools-logs-list-item .time {position: relative; display: block; font: bold 13px Monospace; color: #aaa; padding-right: 10px}
+.admin-tools-logs-list > .admin-tools-logs-list-item .user {position: relative; display: block; padding-left: 10px; font: 14px YouTube; color: #ccc}
+.admin-tools-logs-list > .admin-tools-logs-list-item .action {position: relative; display: block; font: 16px YouTube Light; color: #aaa;}
+.admin-tools-logs-list > .admin-tools-logs-list-item .action b {font-weight: normal !important; font-family: YouTube; color: #ccc; padding: 0px 3px}
+
+.admin-tools-file-browser {position: relative; display: block; margin-top: 30px; background: #002a3a; overflow: hidden; border-radius: 5px; box-shadow: 0px 2px 5px #000000a0;}
+.admin-tools-file-browser .header {position: relative; display: grid; z-index: 2; text-transform: uppercase; grid-template-columns: 50px 1fr 0.15fr 0.35fr 0.35fr;letter-spacing: 1px; padding: 12px 15px 12px 15px; background: #00000030; font: 16px YouTube; border-bottom: 1.5px solid #0af; color: #ccc}
+.admin-tools-file-browser .list {padding: 12px 0px; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr;}
+.admin-tools-file-browser .list .entry {position: relative; display: grid; padding: 8px 15px; grid-template-columns: 50px 1fr 0.15fr 0.35fr 0.35fr; font: 16px YouTube; color: #ccc}
+.admin-tools-file-browser .list .entry .item {position: relative; display: block;}
+.admin-tools-file-browser .list .entry svg {position: absolute; left: 10px; top: 50%; transform: translate(0%, -50%); height: 22px}
+.admin-tools-file-browser .list .entry svg path {fill: #aaa}
+.admin-tools-file-browser .list .entry[parentdirectory] {color: #0af; margin-bottom: 10px; padding: 10px 15px; letter-spacing: 1px;}
+.admin-tools-file-browser .list .entry[parentdirectory] svg path {fill: #0af}
+.admin-tools-file-browser .list .entry[directory] {color: #c80}
+.admin-tools-file-browser .list .entry[directory] svg path {fill: #fa0}
+.admin-tools-file-browser .list .entry:not([onclick]) {opacity: 0.4; cursor: not-allowed; font-family: YouTube Light;}
+.admin-tools-file-browser .list .entry:hover {background: #ffffff0a;}
+.admin-tools-file-browser .list .centerinfo {position: relative; display: block; text-align: center; padding: 50px 0px; opacity: 0.5;}
+.admin-tools-file-browser .list .centerinfo .icon {position: relative; display: block; margin: auto}
+.admin-tools-file-browser .list .centerinfo .icon svg {width: 120px}
+.admin-tools-file-browser .list .centerinfo .icon svg path {fill: #fa0}
+.admin-tools-file-browser .list .centerinfo .title {font: 30px YouTube; text-transform: uppercase; color: #fa0; letter-spacing: 1px;}
+
+.admin-tools-server-settings {position: relative; display: grid; grid-template-columns: 1fr; grid-gap: 10px; margin: 30px 0px;}
+.admin-tools-server-settings .item {position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px; align-items: center;}
+.admin-tools-server-settings .item > .input > * { width: 100% !important; margin-top: 0px}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  content: "Kliknij aby skopiować";
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  /* content: ""; */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

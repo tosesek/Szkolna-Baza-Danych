@@ -1,0 +1,91 @@
+<h3>Do dodania w następnych aktualizacjach:</h3>
+  - Wyszukiwanie użytkownika po nazwie, imieniu, nazwisku lub adresie e-mail
+  - Wymaganie podania litery klasy podczas rejestracji
+  - Dodać zgłaszanie błędów (powiadomienie na email programistów i administratorów oraz zapis do bazy danych)
+  - Dodać możliwość towrzenia większej ilości baz danych (z prefiksem; np: nazwauzytkownika_nazwabazydanych)
+  - Utworzyć domyślną stronę dla każdego użytkownika (np: z zaleceniami dotyczącymi zapisywania zadań)
+  - Dodać stronę odczytywania logów
+  - Dodać automatyczne wybieranie pól input w nowo otwartym oknie dialogowym.
+    - Jeżeli okno nie posiada pól input, dopiero wtedy wybierać przycisk główny (primary)
+
+- wymina konta w pliku sendmail.php //FIXME @done
+  - noreply@zst.pila.pl @done
+- subdomena - do dogadania z Panem Demczarem @done
+  - sbd.zst.pila.pl @done
+
+<h3>Opcjonalnie do zrobienia:</h3>
+  - Jezeli to możliwe, to ulepszyć wygląd strony
+  - Dodać subdomeny dla użytkowników (np: sbd.zst.pila.pl/imienazwisko przekieruje i zadziała na imienazwisko.sbd.zst.pila.pl)
+    - Ogarnąć certyfikat dla subdomen (*.sbd.zst.pila.pl) (to gówno kosztuje aż $50... ZA MIESIĄC!!!!)
+
+
+
+<h3>Do sprawdzenia:</h3>
+  - doawanie do administracji: @done
+    - konto linux z uprawnieniami sudo !!!UWAGA!!! user nie ma dostepu do ssh! @done
+    - ftp z dostepem do wszystkich katalogow @done
+    - mysql z dostepem do wszystkich baz danych @done
+  - usuwanie z administracji: @done
+    - konto linux bez uprawnien sudo @done
+    - ftp z dostepem tylko do /var/www/html/$USER oraz do /home/$USER (ukryty katalog w ftp) @done
+    - mysql z dostepem do baz danych osobno zdefiniowanych przez uzytkownikow danych tabel @done
+  - blokowanie konta: @done
+    - brak dostepu do ftp @done
+    - brak dostepu do MySQL @done
+    - odebranie praw administratora @done
+    - zablokowanie konta linux @done
+    - zablokowanie dostepu do strony @done
+  - odblokowanie konta: @done
+    - odblokowanie konta linux @done
+    - dostep do ftp @done
+    - dostep do MySQL @done
+    - odblokowanie dostepu do strony @done
+  - logowanie @done
+  - rejestracja - do ponownego sprawdzenia! @done
+  - przywracanie hasla @done
+  - aktywacja @done
+  - zmiana hasla @done
+
+<h3>Ukończone:</h3>
+  - logowanie @done
+  - dev tools @done
+  - zarzadzanie uzytkowanikami @done
+    - zatwierdz konto @done
+    - zablokuj @done
+    - edytuj @done
+      - nadaj/odbierz upr admina @done
+      - zablokuj/odblokuj konto @done
+      - edytuj dane: @done
+        - imie @done
+        - nazwisko @done
+        - rok wejscia do szkoly @done
+        - email @done
+      - usuwanie konra @done
+  - ustawienia @done
+  - wyloguj @done
+  - zmiana hasla w ustawieniach (dzialanie) @done
+  - wyglad emaili @done
+  - przywracanie hasla (wyglad) @done
+  - rejestracja //FIXME @done
+  - potwierdzenie maila po rejestracji (ANTY-SPAM) //FIXME @done
+  - reset hasla z linka email (wyglad) @done
+  - WERYFIKACJA POPRAWNOSCI DANYCH //FIXME (ValidateCosTam....) @done
+    - email @done
+    - rok przyjscia do szkoly @done
+    - imie i nazwisko @done
+    - login @done
+  - wymaganie zlozonosci hasla przez JS (mala wielka litera i cyfra) @done
+    - settings @done
+    - reset password @done
+    - register @done
+  - informacje o skopiowaniu kliknietego elementu @done
+  - informacja o tym, ze klikniecie kopiuje niektore elementy @done
+  - podkreslic konta zablokowane kolorem np czerwonym @done
+  - logi serwera @done
+  - poprawienie sprawdzania danych logowania (po zmianie hasla przez email wywal sesje usera) @done
+
+
+
+
+
+

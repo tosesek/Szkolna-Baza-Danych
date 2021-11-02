@@ -1,0 +1,45 @@
+body {background: linear-gradient(45deg, #000a00, #001000);}
+a:focus {outline: 1px solid #0a0;}
+
+input:not([type=checkbox]):-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px #030 inset;}
+
+button:not([disabled]):focus {box-shadow: inset 0px 0px 0px 2px #0a0;}
+
+button:not([disabled])[primary] {background: #0c0 !important; color: #000}
+button:not([disabled])[primary]:hover {background: #0a0 !important}
+button:not([disabled])[primary]:active {background: #080 !important}
+button:not([disabled])[critical] {background: #d00 !important; color: #fff}
+button:not([disabled])[critical]:hover {background: #b00 !important}
+button:not([disabled])[critical]:active {background: #900 !important; color: #fff}
+
+input:active {background: #050;}
+
+pre[act] {border-bottom: 1px solid #0a0;}
+
+.global_dialogs_holder > .dialog > .container {background: #030}
+.global_dialogs_holder > .dialog > .container::after {background: linear-gradient(to right, #080, #0a0);}
+
+.nice-select .list {background: #020;}
+
+.global_header {background: linear-gradient(45deg, #030, #060); box-shadow: 0px 0px 0px 3px #0a0, 0px 0px 25px #000000f0;}
+
+.account_panel_container .content .container {background: #020; box-shadow: 0px 0px 0px 1.5px #0a0, 0px 0px 30px #000000}
+.account_panel_container .content .container hr {background: #080;}
+
+.cookiesinfo_container {background: linear-gradient(45deg, #030, #060);}
+
+.page_generic > .content a {color: #0c0;}
+
+.page_generic > .content table {background: #002a00;}
+.page_generic > .content table thead tr td {background: #003a00;}
+.page_generic > .content table tbody tr td button {background: #040;}
+.page_generic > .content table tbody tr td button:hover {background: #050;}
+
+.login_container {background: #003000;}
+
+.app_authors .item {background: #008800a0;}
+.app_authors .item:hover {background: #00aa00a0;}
+.app_authors .item:active {background: #00ff00a0;}
+
+.admin-tools-file-browser {background: #002000;}
+.admin-tools-file-browser .header {background: #00000040; border-bottom: 1.5px solid #0a0;}
