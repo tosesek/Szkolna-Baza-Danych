@@ -96,7 +96,6 @@
       exit();
     }
     // sprawdzamy czy nie jest już aktywowane
-    // bo jakiś chuj może spamować tym (albo wysłać maila od nowa i niepotrzebnie obciążąć pocztę)
 
     $query="SELECT * FROM users WHERE email='$email'";
     if(mysqli_num_rows(mysqli_query($_DB, $query))==1){
