@@ -8,7 +8,7 @@ Połączenie z bazą danych<br>
 &nbsp;&nbsp;$username - Nazwa konta mysql<br>
 &nbsp;&nbsp;$password - Hasło<br>
 <br>
-Połączenie z bazą danych<br>
+Połączenie konta email<br>
 ./panel/modules/sendmail.php<br>
 &nbsp;&nbsp;$host - <br>
 &nbsp;&nbsp;$username - Adres email do wysyłania maili<br>
