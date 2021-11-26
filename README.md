@@ -10,7 +10,7 @@ Połączenie z bazą danych<br>
 <br>
 Połączenie konta email<br>
 ./panel/modules/sendmail.php<br>
-&nbsp;&nbsp;$host - <br>
+&nbsp;&nbsp;$host - Adres poczty wychodzącej email (np. smtp.gmail.com)<br>
 &nbsp;&nbsp;$username - Adres email do wysyłania maili<br>
 &nbsp;&nbsp;$password - Hasło<br>
 <br>
